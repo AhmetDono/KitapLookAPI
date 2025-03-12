@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\models\\bookgenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\models\\bookgenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17421EE5-201A-43FB-B19F-55545C41301D}|Services\\Services.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\services\\authormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17421EE5-201A-43FB-B19F-55545C41301D}|Services\\Services.csproj|solutionrelative:services\\authormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Author.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Author.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\Author.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Author.cs",
-              "RelativeToolTip": "Entities\\Models\\Author.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T12:19:42.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookGenre.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\BookGenre.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\BookGenre.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\BookGenre.cs",
-              "RelativeToolTip": "Entities\\Models\\BookGenre.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T12:19:17.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Genre.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\Genre.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Genre.cs",
-              "RelativeToolTip": "Entities\\Models\\Genre.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T12:19:06.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\Book.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Book.cs",
-              "RelativeToolTip": "Entities\\Models\\Book.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T12:19:09.501Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -91,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorManager.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Services\\AuthorManager.cs",
+              "RelativeDocumentMoniker": "Services\\AuthorManager.cs",
+              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Services\\AuthorManager.cs",
+              "RelativeToolTip": "Services\\AuthorManager.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAkwEAAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T14:05:37.385Z",
+              "EditorCaption": ""
             }
           ]
         }

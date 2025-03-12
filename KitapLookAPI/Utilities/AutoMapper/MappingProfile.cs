@@ -22,9 +22,22 @@ namespace KitapLookAPI.Utilities.AutoMapper
             CreateMap<BookGenreDtoForUpdate,BookGenre>();
 
             CreateMap<Book, BookDtoForDetails>()
-    .ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.AuthorName))
-    .ForMember(dest => dest.AuthorId, opt => opt.MapFrom(src => src.AuthorID))
-    .ForMember(dest => dest.GenreIDs, opt => opt.MapFrom(src => src.BookGenres.Select(bg => bg.GenreID)));
+            .ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.AuthorName))
+            .ForMember(dest => dest.AuthorId, opt => opt.MapFrom(src => src.AuthorID))
+            // Map Genres with both ID and Name
+            .ForMember(dest => dest.Genres, opt => opt.MapFrom(src => src.BookGenres.Select(bg => new GenreDto
+            {
+                Id = bg.GenreID,
+                Name = bg.Genre.Name
+            })));
+
+            // Mapping configuration for Author to AuthorDtoForDetails
+            CreateMap<Author, AuthorDtoForDetails>()
+            .ForMember(dest => dest.Books, opt => opt.MapFrom(src => src.Books.Select(book => new BookDto
+            {
+                Id = book.Id,
+                BookTitle = book.BookTitle
+            })));
 
         }
     }

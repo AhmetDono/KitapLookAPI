@@ -18,6 +18,6 @@ namespace Repositories.Contracts
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
-        Task<T> GetByIdAsync(int id, bool trackChanges, params Expression<Func<T, object>>[] includes);
+        Task<T> GetByIdAsync(int id, bool trackChanges);
     }
 }

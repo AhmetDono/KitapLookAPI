@@ -100,3 +100,4 @@ C:\Users\ahmet\source\repos\KitapLookAPI\KitapLookAPI\obj\Debug\net6.0\KitapLook
 C:\Users\ahmet\source\repos\KitapLookAPI\KitapLookAPI\obj\Debug\net6.0\ref\KitapLookAPI.dll
 C:\Users\ahmet\source\repos\KitapLookAPI\KitapLookAPI\bin\Debug\net6.0\Humanizer.dll
 C:\Users\ahmet\source\repos\KitapLookAPI\KitapLookAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\KitapLookAPI\obj\Debug\net6.0\KitapLookAPI.sourcelink.json

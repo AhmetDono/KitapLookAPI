@@ -1,4 +1,5 @@
-﻿using Entitites.DataTransferObject;
+﻿using Entities.DataTransferObject;
+using Entitites.DataTransferObject;
 using Entitites.Models;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Services.Contract
         Task<Author> CreateOneAuthorAsync(AuthorDtoForCreate authorDto);
         Task DeleteOneAuthorAsync(int id, bool trackChanges);
         Task UpdateOneAuthorAsync(int id, AuthorDtoForUpdate authorDto, bool trackChanges);
-        Task<Author> GetOneAuthorByIdAsync(int id, bool trackChanges);
+        Task<AuthorDtoForDetails> GetOneAuthorByIdAsync(int id, bool trackChanges);
         Task<IEnumerable<Author>> GetAllAuthorsAsync(bool trackChanges);
     }
 }

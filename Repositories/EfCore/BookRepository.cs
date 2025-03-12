@@ -1,4 +1,5 @@
 ﻿using Entitites.Models;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,17 @@ namespace Repositories.EfCore
     {
         public BookRepository(RepositoryContext context) : base(context)
         {
+        }
+
+        public async Task<Book> GetBookByIdAsync(int id, bool trackChanges)
+        {
+            var query = await FindByConditionAsync(b => b.Id.Equals(id), trackChanges);
+
+            return await query
+                .Include(b => b.BookGenres)
+                .ThenInclude(bo => bo.Genre)
+                .Include(b => b.Author)
+                .SingleOrDefaultAsync();
         }
     }
 }

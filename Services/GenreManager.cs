@@ -39,7 +39,7 @@ namespace Services
 
         public async Task DeleteOneGenreAsync(int id, bool trackChanges)
         {
-            var entity = await _manager.Genre.GetByIdAsync(id, trackChanges);
+            var entity = await _manager.Genre.GetGenreByIdAsync(id, trackChanges);
 
             if(entity is null)
             {
@@ -59,14 +59,14 @@ namespace Services
 
         public async Task<Genre> GetOneGenreByIdAsync(int id, bool trackChanges)
         {
-            var genre = await _manager.Genre.GetByIdAsync(id,trackChanges);
+            var genre = await _manager.Genre.GetGenreByIdAsync(id,trackChanges);
 
             return genre;
         }
 
         public async Task UpdateOneGenreAsync(int id, GenreDtoForUpdate genreDto, bool trackChanges)
         {
-            var entity = await _manager.Genre.GetByIdAsync(id, trackChanges);
+            var entity = await _manager.Genre.GetGenreByIdAsync(id, trackChanges);
 
             if(entity is null)
             {

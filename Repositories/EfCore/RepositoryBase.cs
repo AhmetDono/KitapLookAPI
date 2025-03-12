@@ -46,7 +46,7 @@ namespace Repositories.EfCore
             );
         }
 
-        public async Task<T> GetByIdAsync(int id, bool trackChanges, params Expression<Func<T, object>>[] includes)
+        public async Task<T> GetByIdAsync(int id, bool trackChanges)
         {
             // Başlangıçta sorguyu başlatıyoruz
             IQueryable<T> query = _context.Set<T>();
@@ -55,14 +55,8 @@ namespace Repositories.EfCore
             if (!trackChanges)
                 query = query.AsNoTracking();
 
-            // Eğer herhangi bir include varsa, bunları sorguya ekliyoruz
-            foreach (var include in includes)
-            {
-                query = query.Include(include);
-            }
-
             // Veriyi ID'ye göre çekiyoruz
-            return await query.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id);
+            return await query.FirstOrDefaultAsync();
         }
 
         public async Task UpdateAsync(T entity)

@@ -17,3 +17,4 @@ C:\Users\ahmet\source\repos\KitapLookAPI\Presentation\obj\Debug\net6.0\Presentat
 C:\Users\ahmet\source\repos\KitapLookAPI\Presentation\obj\Debug\net6.0\refint\Presentation.dll
 C:\Users\ahmet\source\repos\KitapLookAPI\Presentation\obj\Debug\net6.0\Presentation.pdb
 C:\Users\ahmet\source\repos\KitapLookAPI\Presentation\obj\Debug\net6.0\ref\Presentation.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\Presentation\obj\Debug\net6.0\Presentation.sourcelink.json

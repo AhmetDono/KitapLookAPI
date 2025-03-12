@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entitites.DataTransferObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,13 @@ namespace Entities.DataTransferObject
         public string AuthorName { get; set; }
 
         // Sadece GenreID listesi
-        public List<int> GenreIDs { get; set; }
+        public List<GenreDto> Genres { get; set; }
+
+    }
+
+    public class GenreDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

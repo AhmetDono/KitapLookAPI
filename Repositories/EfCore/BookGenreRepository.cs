@@ -33,6 +33,7 @@ namespace Repositories.EfCore
         public async Task<BookGenre> GetGenresByBookIdAsync(int bookId, bool trackChanges)
         {
             var query = await FindByConditionAsync(bg => bg.BookID.Equals(bookId), trackChanges);
+
             return await query.SingleOrDefaultAsync();
         }
     }

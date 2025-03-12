@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Entities.DataTransferObject;
 using Entitites.DataTransferObject;
 using Entitites.Models;
 using Repositories.Contracts;
@@ -39,7 +40,7 @@ namespace Services
 
         public async Task DeleteOneAuthorAsync(int id, bool trackChanges)
         {
-            var entity = await _manager.Author.GetByIdAsync(id,trackChanges);
+            var entity = await _manager.Author.GetAuthorByIdAsync(id,trackChanges);
 
             if(entity is null)
             {
@@ -57,16 +58,18 @@ namespace Services
             return authors;
         }
 
-        public async Task<Author> GetOneAuthorByIdAsync(int id, bool trackChanges)
+        public async Task<AuthorDtoForDetails> GetOneAuthorByIdAsync(int id, bool trackChanges)
         {
-            var author = await _manager.Author.GetByIdAsync(id,trackChanges);
+            var entity = await _manager.Author.GetAuthorByIdAsync(id,trackChanges);
+
+            var author = _mapper.Map<AuthorDtoForDetails>(entity);
 
             return author;
         }
 
         public async Task UpdateOneAuthorAsync(int id, AuthorDtoForUpdate authorDto, bool trackChanges)
         {
-            var entity = await _manager.Author.GetByIdAsync(id, trackChanges);
+            var entity = await _manager.Author.GetAuthorByIdAsync(id, trackChanges);
 
             if(entity is null)
             {

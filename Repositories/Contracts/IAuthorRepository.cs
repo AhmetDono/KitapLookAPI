@@ -9,6 +9,6 @@ namespace Repositories.Contracts
 {
     public interface IAuthorRepository : IRepositoryBase<Author>
     {
-
+        Task<Author> GetAuthorByIdAsync(int id, bool trackChanges);
     }
 }

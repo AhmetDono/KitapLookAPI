@@ -56,7 +56,7 @@ namespace Services
 
         public async Task DeleteOneBookAsync(int id, bool trackChanges)
         {
-            var entity = await _manager.Book.GetByIdAsync(id,trackChanges);
+            var entity = await _manager.Book.GetBookByIdAsync(id,trackChanges);
 
             if (entity is null)
             {
@@ -77,10 +77,7 @@ namespace Services
 
         public async Task<BookDtoForDetails> GetOneBookByIdAsync(int id, bool trackChanges)
         {
-            var entity = await _manager.Book.GetByIdAsync(id, trackChanges,
-                b => b.BookGenres,
-                b => b.Author
-                );
+            var entity = await _manager.Book.GetBookByIdAsync(id, trackChanges);
 
             var book = _mapper.Map<BookDtoForDetails>(entity);
             return book;
@@ -88,7 +85,7 @@ namespace Services
 
         public async Task UpdateOneBookAsync(int id, BookDtoForUpdate bookDto, bool trackChanges)
         {
-            var entity = await _manager.Book.GetByIdAsync(id, trackChanges);
+            var entity = await _manager.Book.GetBookByIdAsync(id, trackChanges);
 
             if (entity is null)
             {

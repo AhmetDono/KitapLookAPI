@@ -1,4 +1,5 @@
-﻿using Entitites.DataTransferObject;
+﻿using Entities.DataTransferObject;
+using Entitites.DataTransferObject;
 using Entitites.Models;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Services.Contract
         Task<Genre> CreateOneGenreAsync(GenreDtoForCreate genreDto);
         Task DeleteOneGenreAsync(int id, bool trackChanges);
         Task UpdateOneGenreAsync(int id, GenreDtoForUpdate genreDto, bool trackChanges);
-        Task<Genre> GetOneGenreByIdAsync(int id, bool trackChanges);
-        Task<IEnumerable<Genre>> GetAllGenresAsync(bool trackChanges);
+        Task<GenreDtoForDetails> GetOneGenreByIdAsync(int id, bool trackChanges);
+        Task<IEnumerable<GenreDtoForDetails>> GetAllGenresAsync(bool trackChanges);
     }
 }

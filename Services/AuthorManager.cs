@@ -51,9 +51,11 @@ namespace Services
             await _manager.SaveAsync();
         }
 
-        public async Task<IEnumerable<Author>> GetAllAuthorsAsync(bool trackChanges)
+        public async Task<IEnumerable<AuthorDtoForDetails>> GetAllAuthorsAsync(bool trackChanges)
         {
-            var authors = await _manager.Author.FindAllAsync(trackChanges);
+            var entities = await _manager.Author.GetAllWithIncludesAsync(trackChanges);
+
+            var authors = _mapper.Map<IEnumerable<AuthorDtoForDetails>>(entities);
 
             return authors;
         }

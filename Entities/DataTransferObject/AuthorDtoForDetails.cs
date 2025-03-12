@@ -14,10 +14,10 @@ namespace Entities.DataTransferObject
         public string BornDeatYear { get; set; }
         public string Bio { get; set; }
         public string Image { get; set; }
-        public List<BookDto> Books { get; set; } // Kitaplar ile ilişki
+        public List<BookDtoForAuthor> Books { get; set; } // Kitaplar ile ilişki
     }
 
-    public class BookDto
+    public class BookDtoForAuthor
     {
         public int Id { get; set; }
         public string BookTitle { get; set; }

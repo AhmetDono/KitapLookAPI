@@ -10,5 +10,7 @@ namespace Repositories.Contracts
     public interface IGenreRepository : IRepositoryBase<Genre>
     {
         Task<Genre> GetGenreByIdAsync(int id, bool trackChanges);
+
+        Task<IEnumerable<Genre>> GetAllWithIncludesAsync(bool trackChanges);
     }
 }

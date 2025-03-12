@@ -68,9 +68,11 @@ namespace Services
 
         }
 
-        public async Task<IEnumerable<Book>> GetAllBooksAsync(bool trackChanges)
+        public async Task<IEnumerable<BookDtoForDetails>> GetAllBooksAsync(bool trackChanges)
         {
-            var books = await _manager.Book.FindAllAsync(trackChanges);
+            var entities = await _manager.Book.GetAllWithIncludesAsync(trackChanges);
+
+            var books = _mapper.Map<IEnumerable<BookDtoForDetails>>(entities);
 
             return books;
         }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Entities.DataTransferObject;
 using Entitites.DataTransferObject;
 using Entitites.Models;
 using Repositories.Contracts;
@@ -50,16 +51,20 @@ namespace Services
             await _manager.SaveAsync();
         }
 
-        public async Task<IEnumerable<Genre>> GetAllGenresAsync(bool trackChanges)
+        public async Task<IEnumerable<GenreDtoForDetails>> GetAllGenresAsync(bool trackChanges)
         {
-            var genres = await _manager.Genre.FindAllAsync(trackChanges);
+            var entities = await _manager.Genre.GetAllWithIncludesAsync(trackChanges);
 
+            var genres = _mapper.Map<IEnumerable<GenreDtoForDetails>>(entities);
+            
             return genres;
         }
 
-        public async Task<Genre> GetOneGenreByIdAsync(int id, bool trackChanges)
+        public async Task<GenreDtoForDetails> GetOneGenreByIdAsync(int id, bool trackChanges)
         {
-            var genre = await _manager.Genre.GetGenreByIdAsync(id,trackChanges);
+            var entity = await _manager.Genre.GetGenreByIdAsync(id,trackChanges);
+
+            var genre = _mapper.Map<GenreDtoForDetails>(entity);
 
             return genre;
         }

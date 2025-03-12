@@ -18,12 +18,23 @@ namespace Repositories.EfCore
 
         }
 
+        public async Task<IEnumerable<Author>> GetAllWithIncludesAsync(bool trackChanges)
+        {
+            var query = await FindAllAsync(trackChanges);
+
+            var filteredQuery = query
+                .Include(a => a.Books)
+                .ToListAsync();
+
+            return await filteredQuery;
+        }
+
         public async Task<Author> GetAuthorByIdAsync(int id, bool trackChanges)
         {
             var query = await FindByConditionAsync(a => a.Id.Equals(id), trackChanges);
 
             return await query
-                .Include(b => b.Books)
+                .Include(a => a.Books)
                 .SingleOrDefaultAsync();
         }
     }

@@ -22,6 +22,6 @@ namespace Services.Contract
         Task DeleteOneAuthorAsync(int id, bool trackChanges);
         Task UpdateOneAuthorAsync(int id, AuthorDtoForUpdate authorDto, bool trackChanges);
         Task<AuthorDtoForDetails> GetOneAuthorByIdAsync(int id, bool trackChanges);
-        Task<IEnumerable<Author>> GetAllAuthorsAsync(bool trackChanges);
+        Task<IEnumerable<AuthorDtoForDetails>> GetAllAuthorsAsync(bool trackChanges);
     }
 }

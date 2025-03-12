@@ -1,0 +1,17 @@
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\bin\Debug\net6.0\Repositories.deps.json
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\bin\Debug\net6.0\Repositories.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\bin\Debug\net6.0\Repositories.pdb
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\bin\Debug\net6.0\Entities.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\bin\Debug\net6.0\Entities.pdb
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Reposito.787EC4B2.Up2Date
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.pdb
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\ref\Repositories.dll
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\bin\Debug\net6.0\Repositories.runtimeconfig.json
+C:\Users\ahmet\source\repos\KitapLookAPI\Repositories\obj\Debug\net6.0\Repositories.genruntimeconfig.cache

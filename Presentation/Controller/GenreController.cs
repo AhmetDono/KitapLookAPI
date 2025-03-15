@@ -1,6 +1,7 @@
 ﻿using Entitites.DataTransferObject;
 using Entitites.Models;
 using Entitites.RequestFeatures;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contract;
 using System;
@@ -23,6 +24,7 @@ namespace Presentation.Controller
             _manager = manager;
         }
 
+        [Authorize(Roles ="Admin,Editor")]
         [HttpPost("Create")]
         public async Task<IActionResult> Create(GenreDtoForCreate genreDto)
         {

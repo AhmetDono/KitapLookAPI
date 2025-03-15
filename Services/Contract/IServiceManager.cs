@@ -12,5 +12,6 @@ namespace Services.Contract
         IAuthorService AuthorService { get; }
         IGenreService GenreService { get; }
         IBookGenreService BookGenreService { get; }
+        IAuthenticationService AuthenticationService { get; }
     }
 }

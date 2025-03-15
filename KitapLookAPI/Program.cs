@@ -25,6 +25,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigurationRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureCors();
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureJwt(builder.Configuration);
 
 var app = builder.Build();
 
@@ -39,6 +41,7 @@ app.UseHttpsRedirection();
 
 app.UseCors("CorsPolicy");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

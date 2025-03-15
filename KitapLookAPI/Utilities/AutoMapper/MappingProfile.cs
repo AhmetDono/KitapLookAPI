@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Entities.DataTransferObject;
+using Entities.Models;
 using Entitites.DataTransferObject;
 using Entitites.Models;
 
@@ -51,6 +52,8 @@ namespace KitapLookAPI.Utilities.AutoMapper
                         CoverImage = book.Book.CoverImage,
                         BookDescription = book.Book.BookDescription,
                     })));
+
+            CreateMap<UserForRegistrationDto, User>();
         }
     }
 }

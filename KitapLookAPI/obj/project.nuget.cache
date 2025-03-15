@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e04wu6vUsDvewRXZJCF9KfZu4OZzdqvdwPQc67NSXYHUeMtuVAJBWrcevIUvPb3YhwGBCFK/1YUftG5DxRHt2g==",
+  "dgSpecHash": "vAM7NW+AkzQLV3UENZwa14s0vHeu3hN4w23KI5EsViqXfmHPV0ZaVCh+c8/uhqLUMUcbQsX2MNk9Ko7UZy9BJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\KitapLookAPI\\KitapLookAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\ahmet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.36\\microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.3.0\\microsoft.aspnetcore.authorization.2.3.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.3.0\\microsoft.aspnetcore.authorization.policy.2.3.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.36\\microsoft.aspnetcore.cryptography.internal.6.0.36.nupkg.sha512",

@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\datatransferobject\\genredtofordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\datatransferobject\\genredtofordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32FF0A31-735C-4423-A5D9-EB43C5A73376}|KitapLookAPI\\KitapLookAPI.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\kitaplookapi\\utilities\\automapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32FF0A31-735C-4423-A5D9-EB43C5A73376}|KitapLookAPI\\KitapLookAPI.csproj|solutionrelative:kitaplookapi\\utilities\\automapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\entities\\datatransferobject\\bookdtofordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB417EF9-0E00-45CA-B6B3-11E97894A174}|Entities\\Entities.csproj|solutionrelative:entities\\datatransferobject\\bookdtofordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAFA65D3-7682-4BA4-ADB5-09689FF03326}|Presentation\\Presentation.csproj|c:\\users\\ahmet\\source\\repos\\kitaplookapi\\presentation\\controller\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAFA65D3-7682-4BA4-ADB5-09689FF03326}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controller\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenreDtoForDetails.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\DataTransferObject\\GenreDtoForDetails.cs",
-              "RelativeDocumentMoniker": "Entities\\DataTransferObject\\GenreDtoForDetails.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\DataTransferObject\\GenreDtoForDetails.cs",
-              "RelativeToolTip": "Entities\\DataTransferObject\\GenreDtoForDetails.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwA8AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:41:53.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Genre.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\Genre.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\Models\\Genre.cs",
-              "RelativeToolTip": "Entities\\Models\\Genre.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:27:22.75Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -68,28 +30,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\KitapLookAPI\\Utilities\\AutoMapper\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "KitapLookAPI\\Utilities\\AutoMapper\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\KitapLookAPI\\Utilities\\AutoMapper\\MappingProfile.cs",
-              "RelativeToolTip": "KitapLookAPI\\Utilities\\AutoMapper\\MappingProfile.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAABwAAABlAAAA",
+              "DocumentIndex": 0,
+              "Title": "GenreController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Presentation\\Controller\\GenreController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controller\\GenreController.cs",
+              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Presentation\\Controller\\GenreController.cs",
+              "RelativeToolTip": "Presentation\\Controller\\GenreController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAiwBsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:13:28.676Z",
+              "WhenOpened": "2025-03-15T13:29:51.28Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookDtoForDetails.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\DataTransferObject\\BookDtoForDetails.cs",
-              "RelativeDocumentMoniker": "Entities\\DataTransferObject\\BookDtoForDetails.cs",
-              "ToolTip": "C:\\Users\\ahmet\\source\\repos\\KitapLookAPI\\Entities\\DataTransferObject\\BookDtoForDetails.cs",
-              "RelativeToolTip": "Entities\\DataTransferObject\\BookDtoForDetails.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA+wBgAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:12:49.567Z"
             }
           ]
         }

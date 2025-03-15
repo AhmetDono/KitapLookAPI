@@ -12,12 +12,12 @@ namespace Entitites.RequestFeatures
         const int maxPageSize = 24;
 
         // Auto implemented
-        public int? PageNumber { get; set; }
+        public int PageNumber { get; set; }
 
         //Full property
-        private int? _pageSize;
+        private int _pageSize;
 
-        public int? PageSize
+        public int PageSize
         {
             get { return _pageSize; }
             set { _pageSize = value > maxPageSize ? maxPageSize : value; }

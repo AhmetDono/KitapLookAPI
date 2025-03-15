@@ -11,6 +11,7 @@ namespace Entities.DataTransferObject
     {
         public int Id { get; set; }
         public string BookTitle { get; set; }
+        public string BookDescription { get; set; }
         public string ISBN { get; set; }
         public string Publisher { get; set; }
         public int PublishedYear { get; set; }
@@ -19,6 +20,9 @@ namespace Entities.DataTransferObject
         // Sadece yazar adı
         public int AuthorId { get; set; }
         public string AuthorName { get; set; }
+        public string AuthorImage { get; set; }
+        public string AuthorBio { get; set; }
+        public string BornDeatYear { get; set; }
 
         // Sadece GenreID listesi
         public List<GenreDtoForBook> Genres { get; set; }

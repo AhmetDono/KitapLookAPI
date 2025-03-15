@@ -61,6 +61,10 @@ namespace Repositories.Migrations
                     b.Property<int>("AuthorID")
                         .HasColumnType("int");
 
+                    b.Property<string>("BookDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("BookTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -109,6 +113,10 @@ namespace Repositories.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

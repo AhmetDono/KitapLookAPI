@@ -1,6 +1,9 @@
-﻿using Entitites.Models;
+﻿using Entities.RequestFeatures;
+using Entitites.Models;
+using Entitites.RequestFeatures;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
+using Repositories.EfCore.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,15 +21,19 @@ namespace Repositories.EfCore
 
         }
 
-        public async Task<IEnumerable<Author>> GetAllWithIncludesAsync(bool trackChanges)
+        public async Task<PagedList<Author>> GetAllWithIncludesAsync(AuthorParameters authorParameters,bool trackChanges)
         {
             var query = await FindAllAsync(trackChanges);
 
-            var filteredQuery = query
-                .Include(a => a.Books)
-                .ToListAsync();
+            var filteredQueryAuthors = query
+                .SearchAuthors(authorParameters.SearchTerm)
+                .SortAuthors(authorParameters.OrderBy)
+                .Include(a => a.Books);
 
-            return await filteredQuery;
+            return PagedList<Author>.ToPagedList(
+               filteredQueryAuthors,
+               authorParameters.PageNumber,
+               authorParameters.PageSize);
         }
 
         public async Task<Author> GetAuthorByIdAsync(int id, bool trackChanges)

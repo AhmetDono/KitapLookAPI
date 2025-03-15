@@ -11,6 +11,8 @@ namespace Entities.DataTransferObject
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         public List<BookDtoForGenre> BookGenres { get; set; }
     }
 
@@ -18,6 +20,8 @@ namespace Entities.DataTransferObject
     {
         public int Id { get; set; }
         public string BookTitle { get; set; }
+        public string CoverImage { get; set; }
+        public string BookDescription { get; set; }
     }
 
 }

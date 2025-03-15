@@ -2,6 +2,7 @@
 using Entities.DataTransferObject;
 using Entitites.DataTransferObject;
 using Entitites.Models;
+using Entitites.RequestFeatures;
 using Repositories.Contracts;
 using Services.Contract;
 using System;
@@ -51,13 +52,13 @@ namespace Services
             await _manager.SaveAsync();
         }
 
-        public async Task<IEnumerable<GenreDtoForDetails>> GetAllGenresAsync(bool trackChanges)
+        public async Task<(IEnumerable<GenreDtoForDetails>, MetaData metadata)> GetAllGenresAsync(GenreParameters genreParameters,bool trackChanges)
         {
-            var entities = await _manager.Genre.GetAllWithIncludesAsync(trackChanges);
+            var entitiesWithMetaData = await _manager.Genre.GetAllWithIncludesAsync(genreParameters,trackChanges);
 
-            var genres = _mapper.Map<IEnumerable<GenreDtoForDetails>>(entities);
+            var genres = _mapper.Map<IEnumerable<GenreDtoForDetails>>(entitiesWithMetaData);
             
-            return genres;
+            return (genres, entitiesWithMetaData.MetaData);
         }
 
         public async Task<GenreDtoForDetails> GetOneGenreByIdAsync(int id, bool trackChanges)

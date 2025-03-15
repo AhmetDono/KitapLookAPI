@@ -2,6 +2,7 @@
 using Entities.DataTransferObject;
 using Entitites.DataTransferObject;
 using Entitites.Models;
+using Entitites.RequestFeatures;
 using Repositories.Contracts;
 using Services.Contract;
 using System;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Services
 {
@@ -51,13 +53,13 @@ namespace Services
             await _manager.SaveAsync();
         }
 
-        public async Task<IEnumerable<AuthorDtoForDetails>> GetAllAuthorsAsync(bool trackChanges)
+        public async Task<(IEnumerable<AuthorDtoForDetails>, MetaData metaData)> GetAllAuthorsAsync(AuthorParameters authorParameters,bool trackChanges)
         {
-            var entities = await _manager.Author.GetAllWithIncludesAsync(trackChanges);
+            var entitiesWithMetaData = await _manager.Author.GetAllWithIncludesAsync(authorParameters,trackChanges);
 
-            var authors = _mapper.Map<IEnumerable<AuthorDtoForDetails>>(entities);
+            var authors = _mapper.Map<IEnumerable<AuthorDtoForDetails>>(entitiesWithMetaData);
 
-            return authors;
+            return (authors, entitiesWithMetaData.MetaData);
         }
 
         public async Task<AuthorDtoForDetails> GetOneAuthorByIdAsync(int id, bool trackChanges)

@@ -12,6 +12,7 @@ namespace Entitites.Models
         [Key]
         public int Id { get; set; }
         public string BookTitle { get; set; }
+        public string BookDescription { get; set; }
         public int AuthorID { get; set; }
         public Author Author { get; set; } // Author nesnesine erişim
         public string ISBN { get; set; }

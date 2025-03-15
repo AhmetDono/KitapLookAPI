@@ -1,6 +1,7 @@
 ﻿using Entities.DataTransferObject;
 using Entitites.DataTransferObject;
 using Entitites.Models;
+using Entitites.RequestFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,6 @@ namespace Services.Contract
         Task DeleteOneBookAsync(int id, bool trackChanges);
         Task UpdateOneBookAsync(int id, BookDtoForUpdate bookDto, bool trackChanges);
         Task<BookDtoForDetails> GetOneBookByIdAsync(int id, bool trackChanges);
-        Task<IEnumerable<BookDtoForDetails>> GetAllBooksAsync(bool trackChanges);
+        Task<(IEnumerable<BookDtoForDetails>,MetaData metaData)> GetAllBooksAsync(BookParameters bookParameters,bool trackChanges);
     }
 }

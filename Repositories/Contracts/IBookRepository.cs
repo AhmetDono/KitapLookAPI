@@ -1,4 +1,6 @@
-﻿using Entitites.Models;
+﻿using Entities.RequestFeatures;
+using Entitites.Models;
+using Entitites.RequestFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,6 @@ namespace Repositories.Contracts
     {
         Task<Book> GetBookByIdAsync(int id, bool trackChanges);
 
-        Task<IEnumerable<Book>> GetAllWithIncludesAsync(bool trackChanges);
+        Task<PagedList<Book>> GetAllWithIncludesAsync(BookParameters bookParameters,bool trackChanges);
     }
 }

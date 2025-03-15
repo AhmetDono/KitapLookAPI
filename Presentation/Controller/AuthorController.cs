@@ -1,10 +1,12 @@
 ﻿using Entitites.DataTransferObject;
+using Entitites.RequestFeatures;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -46,11 +48,13 @@ namespace Presentation.Controller
         }
 
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] AuthorParameters authorParameters)
         {
-            var authors = await _manager.AuthorService.GetAllAuthorsAsync(false);
+            var pagedAuthors = await _manager.AuthorService.GetAllAuthorsAsync(authorParameters, false);
 
-            return StatusCode(201,authors);
+            Response.Headers.Add("X-pagination", JsonSerializer.Serialize(pagedAuthors.metaData));
+
+            return StatusCode(201, pagedAuthors.Item1);
         }
 
         [HttpGet("GetById/{id:int}")]

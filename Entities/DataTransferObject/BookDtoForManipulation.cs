@@ -10,6 +10,7 @@ namespace Entitites.DataTransferObject
     public abstract record BookDtoForManipulation
     {
         public string BookTitle { get; set; }
+        public string BookDescription { get; set; }
         public int AuthorID { get; set; }
         public string ISBN { get; set; }
         public int PublishedYear { get; set; }

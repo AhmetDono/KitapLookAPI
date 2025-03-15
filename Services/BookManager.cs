@@ -2,6 +2,7 @@
 using Entities.DataTransferObject;
 using Entitites.DataTransferObject;
 using Entitites.Models;
+using Entitites.RequestFeatures;
 using Repositories.Contracts;
 using Services.Contract;
 using System;
@@ -68,13 +69,13 @@ namespace Services
 
         }
 
-        public async Task<IEnumerable<BookDtoForDetails>> GetAllBooksAsync(bool trackChanges)
+        public async Task<(IEnumerable<BookDtoForDetails>, MetaData metaData)> GetAllBooksAsync(BookParameters bookParameters,bool trackChanges)
         {
-            var entities = await _manager.Book.GetAllWithIncludesAsync(trackChanges);
+            var entitiesWithMetaData = await _manager.Book.GetAllWithIncludesAsync(bookParameters,trackChanges);
 
-            var books = _mapper.Map<IEnumerable<BookDtoForDetails>>(entities);
+            var books = _mapper.Map<IEnumerable<BookDtoForDetails>>(entitiesWithMetaData);
 
-            return books;
+            return (books, entitiesWithMetaData.MetaData);
         }
 
         public async Task<BookDtoForDetails> GetOneBookByIdAsync(int id, bool trackChanges)

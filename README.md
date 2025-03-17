@@ -1,9 +1,12 @@
 # KitapLook RestFull API
 
-## Table of Contents
+## İçerik Tablosu
 - [Proje Mimarisi ve Dosyaları](#proje-mimarisi-ve-dosyaları)
 - [API Özellikleri](#api-özellikleri)
 - [API Endpointleri](#api-endpointleri)
+  - [Author Endpointerli](#author-endpointleri)
+  - [Book Endpointleri](#book-endpointleri)
+  - [Genre Endpointleri](#genre-endpointleri)
 
 ---
 

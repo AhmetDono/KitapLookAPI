@@ -90,9 +90,6 @@
     /api/Book/GetAll?Fields=bookTitle%2CauthorName
     ```
 
-- **HEAD-OPTIONS:**
-    - Supports HEAD and OPTIONS HTTP methods, allowing clients to query metadata and learn about data.
-
 - **JWT, Identity and Refresh Token:**
     - Uses JWT for user authentication. After login, users receive an access token for subsequent requests.
     - Additionally, provides a refresh token for token renewal.
@@ -366,9 +363,6 @@
     ```text
     /api/Book/GetAll?Fields=bookTitle%2CauthorName
     ```
-
-- **HEAD-OPTIONS:**
-    - HEAD ve OPTIONS HTTP metodlarını destekler, bu da istemcilere meta-veri sorgulama ve veri hakkında bilgi edinme imkanı tanır.
 
 - **JWT, Identity ve Refresh Token:**
     - API, kullanıcı kimlik doğrulaması için JWT (JSON Web Token) kullanır. Kullanıcı giriş yaptıktan sonra, bir erişim token'ı (access token) alır. Bu token, API'ye yapılan sonraki taleplerde kimlik doğrulaması için kullanılır. Ayrıca, kullanıcı token'ını yenilemek için bir refresh token da sağlanır.

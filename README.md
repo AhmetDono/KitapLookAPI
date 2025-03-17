@@ -1,8 +1,15 @@
 # KitapLook RestFull API
 
+## Table of Contents
+- [KitapLook RestFull API](#kitaplook-restfull-api)
+  - [Table of Contents](#table-of-contents)
+- [Proje Mimarisi ve Dosyaları](#proje-mimarisi-ve-dosyaları)
+  - [Katmanlı Mimari](#katmanlı-mimari)
+- [API Özellikleri](#api-özellikleri)
+- [API Endpointleri](#api-endpointleri)
 
-# Proje Mimarisi ve Dosyalari
-### Katmanlı Mimari
+# Proje Mimarisi ve Dosyaları
+## Katmanlı Mimari
 <br>
 ├── /Entities
 <br>
@@ -47,7 +54,7 @@
     </div>
 <br>
 
-# API ozellikleri
+# API Özellikleri
 
 <br>
 ── <b>NLog:</b>
@@ -70,25 +77,64 @@
      API, performans ve ölçeklenebilirlik için asenkron kod kullanır.
     </div>
 <br>
-── <b>Sayfalama:</b>
-    <div style="margin-left: 30px;">
-     Veritabanı sorgularında büyük veri setlerinin daha verimli bir şekilde döndürülmesi için sayfalama uygulanır.
-    </div>
+── <b>Sayfalama ve MetaData:</b>
+<div style="margin-left: 30px;">
+    Veritabanı sorgularında büyük veri setlerinin daha verimli bir şekilde döndürülmesi için sayfalama uygulanır.
+<br>
+<br>
+Kullanicidan pageSize ve pageNumber degerleri alinir:
+<br>
+<br>
+
+    `https://localhost:3000/api/Book/GetAll?PageNumber=1&PageSize=10`
+
+<Br>
+Response Header icinde meta data dondurulur.
+<br>
+<br>
+
+    x-pagination: {"CurrentPage":1,"TotalPage":1,"PageSize":10,"TotalCount":2,"HasPrevious":false,"HasNext":false}
+
+</div>
 <br>
 ── <b>Siralama:</b>
-    <div style="margin-left: 30px;">
+<div style="margin-left: 30px;">
      Verilerin sıralanmasını destekler. Kullanıcılar, verileri belirli kriterlere göre sıralayabilirler.
-    </div>
+
+<br>
+
+?Orderby 'name' asc/desc
+<br>
+
+    https://localhost:7195/api/Book/GetAll?OrderBy=bookTitle%20desc%2C%20publishedYear%20asc
+
+</div>
 <br>
 ── <b>Arama:</b>
-    <div style="margin-left: 30px;">
+<div style="margin-left: 30px;">
      Kullanıcının verilerde arama yapabilmesine olanak tanır, böylece kullanıcılar ihtiyaç duydukları verilere hızlıca ulaşabilirler.
-    </div>
+
+<br>
+
+?SearchTerm 'name'
+<br>
+
+     https://localhost:7195/api/Book/GetAll?SearchTerm=K%C3%BCrk%20Mantolu%20Madonna
+
+</div>
 <br>
 ── <b>Veri Sekillendirme:</b>
-    <div style="margin-left: 30px;">
+<div style="margin-left: 30px;">
      Kullanıcıların yalnızca ihtiyaç duydukları verileri almasını sağlar. Bu sayede API performansı artırılır.
-    </div>
+
+<br>
+
+?Fields 'name1,name2'
+<br>
+
+    https://localhost:7195/api/Book/GetAll?Fields=bookTitle%2CauthorName
+
+</div>
 <br>
 ── <b>Head-Options:</b>
     <div style="margin-left: 30px;">
@@ -100,3 +146,6 @@
      Json Web Token (JWT), kimlik doğrulama (Identity) ve refresh token desteği sunarak güvenli bir kullanıcı doğrulama işlemi sağlar.
     </div>
 <br>
+
+
+# API Endpointleri

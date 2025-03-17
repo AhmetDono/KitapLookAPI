@@ -1,4 +1,4 @@
-# KitapLOOK Restfull API
+# KitapLOOK Restful API
 
 - [English Descrpiton](#english)
 - [Türkçe Açıklama](#türkçe)

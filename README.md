@@ -54,7 +54,7 @@
     - Veritabanı sorgularında büyük veri setlerinin daha verimli bir şekilde döndürülmesi için sayfalama uygulanır.
     - Kullanıcıdan `PageSize` ve `PageNumber` değerleri alınır:
   
-    `https://localhost:3000/api/Book/GetAll?PageNumber=1&PageSize=10`
+    `/api/Book/GetAll?PageNumber=1&PageSize=10`
   
     **Response Header** içinde meta veri döndürülür:
     ```json
@@ -65,21 +65,21 @@
     - Verilerin sıralanmasını destekler. Kullanıcılar, verileri belirli kriterlere göre sıralayabilirler.
     - Örnek:
     ```text
-    https://localhost:7195/api/Book/GetAll?OrderBy=bookTitle%20desc%2C%20publishedYear%20asc
+    /api/Book/GetAll?OrderBy=bookTitle%20desc%2C%20publishedYear%20asc
     ```
 
 - **Arama:**
     - Kullanıcıların verilerde arama yapabilmelerine olanak tanır.
     - Örnek:
     ```text
-    https://localhost:7195/api/Book/GetAll?SearchTerm=K%C3%BCrk%20Mantolu%20Madonna
+    /api/Book/GetAll?SearchTerm=K%C3%BCrk%20Mantolu%20Madonna
     ```
 
 - **Veri Şekillendirme:**
     - Kullanıcıların yalnızca ihtiyaç duydukları verileri almasını sağlar.
     - Örnek:
     ```text
-    https://localhost:7195/api/Book/GetAll?Fields=bookTitle%2CauthorName
+    /api/Book/GetAll?Fields=bookTitle%2CauthorName
     ```
 
 - **HEAD-OPTIONS:**
@@ -91,3 +91,180 @@
 
 # API Endpointleri
 
+## Author Endpointleri
+- **CREATE AUTHOR:**
+    - Endpoint:
+    ```text
+    api/Author/Create
+    ```
+
+    - Request Body:
+    ```
+    {
+      "authorName": "string",
+      "bornDeatYear": "string",
+      "bio": "string",
+      "image": "string"
+    }
+    ```
+- **DELETE AUTHOR:**
+    - Endpoint:
+    ```text
+    api/Author/Delete/{id}
+    ```
+
+- **UPDATE AUTHOR:**
+  - Endpoint:
+    ```text
+    api/Author/Update/{id}
+    ```
+
+  - Request Body:
+    ```text
+    {
+      "authorName": "string",
+      "bornDeatYear": "string",
+      "bio": "string",
+      "image": "string",
+      "id": 0
+    }
+    ```
+
+- **GETALL AUTHOR:**
+    - Endpoint:
+    ```text
+    api/Author/GetAll
+    ```
+    - Parametereler:
+    ```text
+    PageSize,PageNumber,SearchTerm,OrdeyBy,Fields
+    ```
+
+
+- **GETBYID AUTHOR:**
+    - Endpoint:
+    ```text
+    api/Author/GetById/{id}
+    ```
+
+## Book Endpointleri
+- **CREATE BOOK:**
+    - Endpoint:
+    ```text
+    api/Book/Create
+    ```
+
+    - Request Body:
+    ```
+    {
+      "bookTitle": "string",
+      "bookDescription": "string",
+      "authorID": 0,
+      "isbn": "string",
+      "publishedYear": 0,
+      "publisher": "string",
+      "coverImage": "string",
+      "bookGenre": [
+        {
+          "genreId": 0
+        }
+      ]
+    }
+    ```
+- **DELETE BOOK:**
+    - Endpoint:
+    ```text
+    api/Book/Delete/{id}
+    ```
+
+- **UPDATE BOOK:**
+  - Endpoint:
+    ```text
+    api/Book/Update/{id}
+    ```
+
+  - Request Body:
+    ```text
+    {
+      "id":0,
+      "bookTitle": "string",
+      "bookDescription": "string",
+      "authorID": 0,
+      "isbn": "string",
+      "publishedYear": 0,
+      "publisher": "string",
+      "coverImage": "string",
+      "bookGenre": [
+        {
+          "genreId": 0
+        }
+      ]
+    }
+    ```
+
+- **GETALL BOOK:**
+    - Endpoint:
+    ```text
+    api/Genre/GetAll
+    ```
+    - Parametereler:
+    ```text
+    PageSize,PageNumber,SearchTerm,OrdeyBy,Fields
+    ```
+
+
+- **GETBYID BOOK:**
+    - Endpoint:
+    ```text
+    api/Genre/GetById/{id}
+    ```
+
+## Genre Endpointleri
+- **CREATE GENRE:**
+    - Endpoint:
+    ```text
+    api/Genre/Create
+    ```
+
+    - Request Body:
+    ```
+    {
+      "name": "string"
+    }
+    ```
+- **DELETE GENRE:**
+    - Endpoint:
+    ```text
+    api/Genre/Delete/{id}
+    ```
+
+- **UPDATE GENRE:**
+  - Endpoint:
+    ```text
+    api/Genre/Update/{id}
+    ```
+
+  - Request Body:
+    ```text
+    {
+      "name": "string",
+      "id": 0
+    }
+    ```
+
+- **GETALL GENRE:**
+    - Endpoint:
+    ```text
+    api/Genre/GetAll
+    ```
+    - Parametereler:
+    ```text
+    PageSize,PageNumber,SearchTerm,OrdeyBy,Fields
+    ```
+
+
+- **GETBYID GENRE:**
+    - Endpoint:
+    ```text
+    api/Genre/GetById/{id}
+    ```

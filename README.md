@@ -87,40 +87,7 @@
 
 - **JWT, Identity ve Refresh Token:**
     - API, kullanıcı kimlik doğrulaması için JWT (JSON Web Token) kullanır. Kullanıcı giriş yaptıktan sonra, bir erişim token'ı (access token) alır. Bu token, API'ye yapılan sonraki taleplerde kimlik doğrulaması için kullanılır. Ayrıca, kullanıcı token'ını yenilemek için bir refresh token da sağlanır.
-  
-    **Login Endpoint:**
-    ```bash
-    POST https://localhost:7195/api/Auth/Login
-    ```
 
-    **Response:**
-    ```json
-    {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-        "refreshToken": "dGhpc0lzYVJlZnJlc2hUb2tlbg=="
-    }
-    ```
-
-    **Token Yenileme Endpoint:**
-    ```bash
-    POST https://localhost:7195/api/Auth/RefreshToken
-    ```
-
-    **Request:**
-    ```json
-    {
-        "refreshToken": "dGhpc0lzYVJlZnJlc2hUb2tlbg=="
-    }
-    ```
-
-    **Response:**
-    ```json
-    {
-        "accessToken": "newAccessTokenHere"
-    }
-    ```
-
----
 
 # API Endpointleri
 

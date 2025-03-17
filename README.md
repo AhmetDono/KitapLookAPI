@@ -1,10 +1,7 @@
 # KitapLook RestFull API
 
 ## Table of Contents
-- [KitapLook RestFull API](#kitaplook-restfull-api)
-  - [Table of Contents](#table-of-contents)
 - [Proje Mimarisi ve Dosyaları](#proje-mimarisi-ve-dosyaları)
-  - [Katmanlı Mimari](#katmanlı-mimari)
 - [API Özellikleri](#api-özellikleri)
 - [API Endpointleri](#api-endpointleri)
 
